@@ -318,6 +318,53 @@ h1, h2, h3 {
   padding: clamp(2rem, 5vw, 3.5rem) 0 1.75rem;
 }
 
+.article-heading {
+  position: relative;
+  z-index: 0;
+}
+
+.article-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+.article-bg svg {
+  width: min(50vw, 22rem);
+  height: auto;
+  overflow: visible;
+}
+
+.article-bg-spin {
+  transform-origin: 150px 150px;
+  animation: spin-slow 22s linear infinite;
+}
+
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.article-bg-flicker {
+  transform-origin: 150px 225px;
+  animation: flame-flicker 2.4s ease-in-out infinite;
+}
+
+@keyframes flame-flicker {
+  0%, 100% {
+    transform: rotate(-3deg) scaleY(1);
+  }
+  50% {
+    transform: rotate(3deg) scaleY(1.03);
+  }
+}
+
 .article-title {
   font-size: clamp(2.4rem, 8vw, 3.7rem);
   letter-spacing: 0.06em;
@@ -417,5 +464,10 @@ h1, h2, h3 {
     opacity: 1;
     transform: none;
     transition: none;
+  }
+
+  .article-bg-spin,
+  .article-bg-flicker {
+    animation: none;
   }
 }
