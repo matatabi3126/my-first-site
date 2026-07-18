@@ -82,12 +82,58 @@
     </div>
   </div>
 
+  <section class="wrap gallery reveal">
+    <span class="kicker">Gallery</span>
+    <div class="gallery-grid">
+      <button type="button" class="gallery-item" data-caption="テント">
+        <svg viewBox="0 0 200 200" aria-hidden="true">
+          <path d="M100,50 L160,150 L40,150 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          <line x1="100" y1="50" x2="100" y2="150" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M85,150 L100,105 L115,150 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          <line x1="20" y1="150" x2="180" y2="150" stroke="currentColor" stroke-width="2"/>
+          <path d="M40,150 L25,165 M160,150 L175,165" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <span class="gallery-item-label">テント</span>
+      </button>
+      <button type="button" class="gallery-item" data-caption="ランタン">
+        <svg viewBox="0 0 200 200" aria-hidden="true">
+          <path d="M92,50 L92,40 L108,40 L108,50" fill="none" stroke="currentColor" stroke-width="2"/>
+          <line x1="100" y1="30" x2="100" y2="40" stroke="currentColor" stroke-width="2"/>
+          <path d="M85,50 L115,50 L115,60 L85,60 Z" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M75,60 C75,60 70,120 80,145 C86,155 114,155 120,145 C130,120 125,60 125,60 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          <line x1="75" y1="90" x2="125" y2="90" stroke="currentColor" stroke-width="1.5"/>
+          <line x1="75" y1="120" x2="125" y2="120" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M95,100 C95,95 105,95 105,100 C105,105 95,108 95,112 C95,116 105,116 105,112" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+        <span class="gallery-item-label">ランタン</span>
+      </button>
+      <button type="button" class="gallery-item" data-caption="山の稜線">
+        <svg viewBox="0 0 200 200" aria-hidden="true">
+          <circle cx="150" cy="55" r="12" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <polyline points="15,150 55,90 85,120 110,60 140,110 165,85 185,150" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          <line x1="10" y1="150" x2="190" y2="150" stroke="currentColor" stroke-width="2"/>
+        </svg>
+        <span class="gallery-item-label">山の稜線</span>
+      </button>
+    </div>
+  </section>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <div class="lightbox-backdrop" data-lightbox-close></div>
+    <div class="lightbox-panel" role="dialog" aria-modal="true" aria-label="イラスト拡大表示">
+      <button type="button" class="lightbox-close" data-lightbox-close aria-label="閉じる">&times;</button>
+      <div class="lightbox-art"></div>
+      <p class="lightbox-caption"></p>
+    </div>
+  </div>
+
   <footer class="wrap site-footer">
     &copy; 2026 caccio
   </footer>
 
   <script src="scroll-animate.js" defer></script>
   <script src="theme.js" defer></script>
+  <script src="gallery.js" defer></script>
 
 </body>
 </html>

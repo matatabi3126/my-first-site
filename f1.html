@@ -91,12 +91,67 @@
     </div>
   </div>
 
+  <section class="wrap gallery reveal">
+    <span class="kicker">Gallery</span>
+    <div class="gallery-grid">
+      <button type="button" class="gallery-item" data-caption="ヘルメット">
+        <svg viewBox="0 0 200 200" aria-hidden="true">
+          <path d="M100,50 L100,40 M85,52 L80,42 M115,52 L120,42" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M40,120 C40,80 65,50 100,50 C135,50 160,80 160,120 L160,135 C160,142 154,148 147,148 L53,148 C46,148 40,142 40,135 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M60,100 L140,100 L145,130 L55,130 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          <line x1="60" y1="115" x2="140" y2="115" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+        <span class="gallery-item-label">ヘルメット</span>
+      </button>
+      <button type="button" class="gallery-item" data-caption="チェッカーフラッグ">
+        <svg viewBox="0 0 200 200" aria-hidden="true">
+          <line x1="58" y1="40" x2="58" y2="170" stroke="currentColor" stroke-width="2"/>
+          <rect x="60" y="46" width="90" height="54" fill="none" stroke="currentColor" stroke-width="2"/>
+          <g fill="currentColor">
+            <rect x="60" y="46" width="15" height="18"/>
+            <rect x="90" y="46" width="15" height="18"/>
+            <rect x="120" y="46" width="15" height="18"/>
+            <rect x="75" y="64" width="15" height="18"/>
+            <rect x="105" y="64" width="15" height="18"/>
+            <rect x="135" y="64" width="15" height="18"/>
+            <rect x="60" y="82" width="15" height="18"/>
+            <rect x="90" y="82" width="15" height="18"/>
+            <rect x="120" y="82" width="15" height="18"/>
+          </g>
+        </svg>
+        <span class="gallery-item-label">チェッカーフラッグ</span>
+      </button>
+      <button type="button" class="gallery-item" data-caption="表彰台">
+        <svg viewBox="0 0 200 200" aria-hidden="true">
+          <rect x="30" y="115" width="40" height="35" fill="none" stroke="currentColor" stroke-width="2"/>
+          <rect x="80" y="90" width="40" height="60" fill="none" stroke="currentColor" stroke-width="2"/>
+          <rect x="130" y="130" width="40" height="20" fill="none" stroke="currentColor" stroke-width="2"/>
+          <line x1="20" y1="150" x2="180" y2="150" stroke="currentColor" stroke-width="2"/>
+          <text x="50" y="138" font-size="14" text-anchor="middle" fill="currentColor" font-family="sans-serif">2</text>
+          <text x="100" y="122" font-size="16" text-anchor="middle" fill="currentColor" font-family="sans-serif">1</text>
+          <text x="150" y="145" font-size="12" text-anchor="middle" fill="currentColor" font-family="sans-serif">3</text>
+        </svg>
+        <span class="gallery-item-label">表彰台</span>
+      </button>
+    </div>
+  </section>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <div class="lightbox-backdrop" data-lightbox-close></div>
+    <div class="lightbox-panel" role="dialog" aria-modal="true" aria-label="イラスト拡大表示">
+      <button type="button" class="lightbox-close" data-lightbox-close aria-label="閉じる">&times;</button>
+      <div class="lightbox-art"></div>
+      <p class="lightbox-caption"></p>
+    </div>
+  </div>
+
   <footer class="wrap site-footer">
     &copy; 2026 caccio
   </footer>
 
   <script src="scroll-animate.js" defer></script>
   <script src="theme.js" defer></script>
+  <script src="gallery.js" defer></script>
 
 </body>
 </html>

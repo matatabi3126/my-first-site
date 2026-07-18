@@ -88,12 +88,56 @@
     </div>
   </div>
 
+  <section class="wrap gallery reveal">
+    <span class="kicker">Gallery</span>
+    <div class="gallery-grid">
+      <button type="button" class="gallery-item" data-caption="フットサルシューズ">
+        <svg viewBox="0 0 200 200" aria-hidden="true">
+          <path d="M20,150 L20,125 C20,115 30,108 42,108 C55,108 62,100 72,92 C85,82 100,78 118,80 C140,83 158,95 168,112 C174,122 174,135 168,144 C164,150 156,153 148,153 L26,153 C22,153 20,152 20,150 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M42,108 C48,100 52,94 58,90 M62,104 C68,96 72,90 78,86 M82,98 C88,90 93,85 100,82" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <line x1="20" y1="140" x2="168" y2="140" stroke="currentColor" stroke-width="2"/>
+        </svg>
+        <span class="gallery-item-label">フットサルシューズ</span>
+      </button>
+      <button type="button" class="gallery-item" data-caption="ホイッスル">
+        <svg viewBox="0 0 200 200" aria-hidden="true">
+          <rect x="55" y="85" width="45" height="35" rx="8" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M100,88 C130,85 155,95 160,112 C163,124 155,135 140,135 C122,135 105,125 100,112 Z" fill="none" stroke="currentColor" stroke-width="2"/>
+          <circle cx="132" cy="112" r="6" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M60,120 C58,132 62,142 72,146 C80,150 90,148 95,140" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <span class="gallery-item-label">ホイッスル</span>
+      </button>
+      <button type="button" class="gallery-item" data-caption="トロフィー">
+        <svg viewBox="0 0 200 200" aria-hidden="true">
+          <path d="M78,55 L122,55 L119,95 C118,110 108,120 100,120 C92,120 82,110 81,95 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M78,58 C62,58 52,68 52,80 C52,95 65,105 80,102" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M122,58 C138,58 148,68 148,80 C148,95 135,105 120,102" fill="none" stroke="currentColor" stroke-width="2"/>
+          <line x1="100" y1="120" x2="100" y2="140" stroke="currentColor" stroke-width="2"/>
+          <path d="M80,140 L120,140 L128,155 L72,155 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          <line x1="65" y1="165" x2="135" y2="165" stroke="currentColor" stroke-width="2"/>
+        </svg>
+        <span class="gallery-item-label">トロフィー</span>
+      </button>
+    </div>
+  </section>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <div class="lightbox-backdrop" data-lightbox-close></div>
+    <div class="lightbox-panel" role="dialog" aria-modal="true" aria-label="イラスト拡大表示">
+      <button type="button" class="lightbox-close" data-lightbox-close aria-label="閉じる">&times;</button>
+      <div class="lightbox-art"></div>
+      <p class="lightbox-caption"></p>
+    </div>
+  </div>
+
   <footer class="wrap site-footer">
     &copy; 2026 caccio
   </footer>
 
   <script src="scroll-animate.js" defer></script>
   <script src="theme.js" defer></script>
+  <script src="gallery.js" defer></script>
 
 </body>
 </html>
