@@ -154,6 +154,45 @@ h1, h2, h3 {
   justify-content: center;
 }
 
+.cover-heading {
+  position: relative;
+  z-index: 0;
+}
+
+.cover-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+.cover-bg svg {
+  width: min(50vw, 22rem);
+  height: auto;
+  overflow: visible;
+}
+
+.cover-bg-blades {
+  transform-origin: 150px 150px;
+  animation: windmill-spin 22s linear infinite;
+}
+
+@keyframes windmill-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cover-bg-blades {
+    animation: none;
+  }
+}
+
 .cover-title {
   font-size: clamp(3.2rem, 13vw, 6.2rem);
   letter-spacing: 0.05em;
