@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<script>document.documentElement.dataset.theme = localStorage.getItem('theme') || 'light';</script>
 </head>
 <body>
 
@@ -20,6 +21,22 @@
         <a href="futsal.html">Futsal</a>
         <a href="f1.html">F1</a>
         <a href="camp.html">Camp</a>
+        <button type="button" class="theme-toggle" aria-pressed="false" aria-label="ダークモードを切り替える">
+          <svg class="icon-moon" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+            <g stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+              <line x1="12" y1="2.5" x2="12" y2="5"/>
+              <line x1="12" y1="19" x2="12" y2="21.5"/>
+              <line x1="2.5" y1="12" x2="5" y2="12"/>
+              <line x1="19" y1="12" x2="21.5" y2="12"/>
+              <line x1="4.9" y1="4.9" x2="6.6" y2="6.6"/>
+              <line x1="17.4" y1="17.4" x2="19.1" y2="19.1"/>
+              <line x1="4.9" y1="19.1" x2="6.6" y2="17.4"/>
+              <line x1="17.4" y1="6.6" x2="19.1" y2="4.9"/>
+            </g>
+          </svg>
+        </button>
       </nav>
     </div>
   </div>
@@ -28,13 +45,13 @@
     <div class="cover-heading">
       <div class="cover-bg" aria-hidden="true">
         <svg viewBox="0 0 300 300">
-          <line x1="150" y1="150" x2="150" y2="290" stroke="#2a2724" stroke-width="2"/>
+          <line x1="150" y1="150" x2="150" y2="290" stroke="currentColor" stroke-width="2"/>
           <g class="cover-bg-blades">
-            <rect x="146" y="45" width="8" height="105" fill="none" stroke="#2a2724" stroke-width="2"/>
-            <rect x="146" y="45" width="8" height="105" fill="none" stroke="#2a2724" stroke-width="2" transform="rotate(90 150 150)"/>
-            <rect x="146" y="45" width="8" height="105" fill="none" stroke="#2a2724" stroke-width="2" transform="rotate(180 150 150)"/>
-            <rect x="146" y="45" width="8" height="105" fill="none" stroke="#2a2724" stroke-width="2" transform="rotate(270 150 150)"/>
-            <circle cx="150" cy="150" r="7" fill="#2a2724"/>
+            <rect x="146" y="45" width="8" height="105" fill="none" stroke="currentColor" stroke-width="2"/>
+            <rect x="146" y="45" width="8" height="105" fill="none" stroke="currentColor" stroke-width="2" transform="rotate(90 150 150)"/>
+            <rect x="146" y="45" width="8" height="105" fill="none" stroke="currentColor" stroke-width="2" transform="rotate(180 150 150)"/>
+            <rect x="146" y="45" width="8" height="105" fill="none" stroke="currentColor" stroke-width="2" transform="rotate(270 150 150)"/>
+            <circle cx="150" cy="150" r="7" fill="currentColor"/>
           </g>
         </svg>
       </div>
@@ -88,6 +105,7 @@
   </footer>
 
   <script src="scroll-animate.js" defer></script>
+  <script src="theme.js" defer></script>
 
 </body>
 </html>
