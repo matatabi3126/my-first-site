@@ -11,6 +11,12 @@
   function openMenu() {
     toggle.setAttribute('aria-expanded', 'true');
     links.classList.add('is-open');
+    var searchToggle = document.querySelector('.search-toggle');
+    var searchPanel = document.getElementById('search-panel');
+    if (searchToggle && searchPanel) {
+      searchToggle.setAttribute('aria-expanded', 'false');
+      searchPanel.hidden = true;
+    }
   }
 
   toggle.addEventListener('click', function () {

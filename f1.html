@@ -40,6 +40,12 @@
           <a href="f1.html" aria-current="page">F1</a>
           <a href="camp.html">Camp</a>
         </div>
+        <button type="button" class="icon-button search-toggle" aria-expanded="false" aria-controls="search-panel" aria-label="サイト内検索を開く">
+          <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
+            <circle cx="10.5" cy="10.5" r="6" fill="none" stroke="currentColor" stroke-width="1.6"/>
+            <line x1="15" y1="15" x2="20" y2="20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+        </button>
         <button type="button" class="icon-button theme-toggle" aria-pressed="false" aria-label="ダークモードを切り替える">
           <svg class="icon-moon" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
           <svg class="icon-sun" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
@@ -67,6 +73,13 @@
             <line x1="18" y1="6" x2="6" y2="18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
           </svg>
         </button>
+        <div class="search-panel" id="search-panel" hidden>
+          <div class="search-panel-inner">
+            <input type="search" class="search-input" placeholder="サイト内を検索" aria-label="サイト内検索">
+            <button type="button" class="search-close" aria-label="検索を閉じる">&times;</button>
+          </div>
+          <ul class="search-results"></ul>
+        </div>
       </nav>
     </div>
   </div>
@@ -183,6 +196,7 @@
   <script src="theme.js" defer></script>
   <script src="gallery.js" defer></script>
   <script src="nav.js" defer></script>
+  <script src="search.js" defer></script>
 
 </body>
 </html>

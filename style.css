@@ -95,6 +95,7 @@ h1, h2, h3 {
 }
 
 .masthead-nav {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -176,10 +177,6 @@ h1, h2, h3 {
 }
 
 @media (max-width: 48rem) {
-  .masthead-nav {
-    position: relative;
-  }
-
   .nav-toggle {
     display: inline-flex;
   }
@@ -213,6 +210,121 @@ h1, h2, h3 {
   .nav-links a[aria-current="page"] {
     border-bottom: none;
   }
+}
+
+/* ---------- site search ---------- */
+
+.search-panel {
+  position: absolute;
+  top: calc(100% + 0.75rem);
+  right: 0;
+  z-index: 60;
+  width: min(90vw, 22rem);
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-rule);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  padding: 1rem;
+}
+
+.search-panel[hidden] {
+  display: none;
+}
+
+.search-panel-inner {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.search-input {
+  flex: 1;
+  min-width: 0;
+  font: inherit;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  padding: 0.5rem 0.1rem;
+  border: none;
+  border-bottom: 1px solid var(--color-rule);
+  background: transparent;
+  color: var(--color-text);
+}
+
+.search-input:focus {
+  outline: none;
+  border-bottom-color: var(--color-accent);
+}
+
+.search-close {
+  flex-shrink: 0;
+  width: 1.6rem;
+  height: 1.6rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-rule);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--color-text-soft);
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.search-close:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.search-results {
+  list-style: none;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.search-results li + li {
+  border-top: 1px solid var(--color-rule);
+}
+
+.search-results a {
+  display: block;
+  padding: 0.65rem 0.1rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.search-result-title {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  color: var(--color-text);
+}
+
+.search-results a:hover .search-result-title {
+  color: var(--color-accent);
+}
+
+.search-result-snippet {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: var(--color-text-soft);
+}
+
+.search-result-snippet mark {
+  background: none;
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.search-empty {
+  padding: 0.5rem 0.1rem;
+  font-size: 0.82rem;
+  color: var(--color-text-soft);
 }
 
 /* ---------- small reusable bits ---------- */
