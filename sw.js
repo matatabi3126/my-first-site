@@ -1,10 +1,11 @@
-var CACHE_NAME = 'caccio-site-v1';
+var CACHE_NAME = 'caccio-site-v2';
 
 var PRECACHE_URLS = [
   'index.html',
   'futsal.html',
   'camp.html',
   'f1.html',
+  'making.html',
   'style.css',
   'scroll-animate.js',
   'theme.js',
