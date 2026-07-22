@@ -132,8 +132,12 @@
 
     function closeSearch() {
       if (panel.hidden) return;
+      var hadFocusInside = panel.contains(document.activeElement);
       panel.hidden = true;
       toggle.setAttribute('aria-expanded', 'false');
+      if (hadFocusInside) {
+        toggle.focus();
+      }
     }
 
     toggle.addEventListener('click', function () {

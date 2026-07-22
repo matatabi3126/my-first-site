@@ -38,6 +38,13 @@
   });
 
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') close();
+    if (lightbox.hidden) return;
+    if (e.key === 'Escape') {
+      close();
+    } else if (e.key === 'Tab') {
+      // The close button is the only focusable element in the dialog.
+      e.preventDefault();
+      closeButton.focus();
+    }
   });
 })();
