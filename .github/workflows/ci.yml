@@ -1,0 +1,75 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  html-validate:
+    name: HTML Validate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run html-validate
+        run: npx --yes html-validate "*.html"
+
+  lighthouse:
+    name: Lighthouse CI
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run Lighthouse CI
+        run: npx --yes @lhci/cli@0.14.x autorun
+
+      - name: Summarize Lighthouse scores
+        if: always()
+        run: |
+          {
+            echo "## Lighthouse CI Results"
+            echo ""
+            echo "| Page | Performance | Accessibility | SEO | Report |"
+            echo "|---|---|---|---|---|"
+          } >> "$GITHUB_STEP_SUMMARY"
+          node -e '
+            const fs = require("fs");
+            const path = require("path");
+            const dir = ".lighthouseci";
+            if (!fs.existsSync(dir)) {
+              fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, "| _(no results — Lighthouse run failed before producing output)_ | | | | |\n");
+              process.exit(0);
+            }
+            const links = JSON.parse(fs.readFileSync(path.join(dir, "links.json"), "utf8"));
+            const pct = (n) => (n == null ? "-" : Math.round(n * 100));
+            const files = fs.readdirSync(dir).filter((f) => f.startsWith("lhr-") && f.endsWith(".json"));
+            const lines = files.map((f) => {
+              const lhr = JSON.parse(fs.readFileSync(path.join(dir, f), "utf8"));
+              const url = lhr.finalUrl || lhr.requestedUrl;
+              const page = url.replace(/^https?:\/\/[^/]+/, "");
+              const c = lhr.categories || {};
+              const report = links[url] ? `[link](${links[url]})` : "-";
+              return `| ${page} | ${pct(c.performance && c.performance.score)} | ${pct(c.accessibility && c.accessibility.score)} | ${pct(c.seo && c.seo.score)} | ${report} |`;
+            });
+            fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, lines.join("\n") + "\n");
+          '
+
+      - name: Upload Lighthouse reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-reports
+          path: .lighthouseci
+          retention-days: 30
