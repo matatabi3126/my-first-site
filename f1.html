@@ -13,16 +13,16 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#a63d40">
-<title>F1 - caccio</title>
+<title data-i18n="f1.title">F1 - caccio</title>
 <meta property="og:type" content="website">
-<meta property="og:title" content="F1 - caccio">
-<meta property="og:description" content="DAZN観戦をきっかけにF1にハマったcaccio。応援チームはアストンマーチン・ホンダ、推しドライバーはフェルスタッペン。">
+<meta property="og:title" content="F1 - caccio" data-i18n-content="f1.title">
+<meta property="og:description" content="DAZN観戦をきっかけにF1にハマったcaccio。応援チームはアストンマーチン・ホンダ、推しドライバーはフェルスタッペン。" data-i18n-content="f1.ogDescription">
 <meta property="og:image" content="https://matatabi3126.github.io/my-first-site/profile.JPG">
 <meta property="og:url" content="https://matatabi3126.github.io/my-first-site/f1.html">
 <meta property="og:site_name" content="caccio's Profile">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="F1 - caccio">
-<meta name="twitter:description" content="DAZN観戦をきっかけにF1にハマったcaccio。応援チームはアストンマーチン・ホンダ、推しドライバーはフェルスタッペン。">
+<meta name="twitter:title" content="F1 - caccio" data-i18n-content="f1.title">
+<meta name="twitter:description" content="DAZN観戦をきっかけにF1にハマったcaccio。応援チームはアストンマーチン・ホンダ、推しドライバーはフェルスタッペン。" data-i18n-content="f1.ogDescription">
 <meta name="twitter:image" content="https://matatabi3126.github.io/my-first-site/profile.JPG">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,7 +32,7 @@
 </head>
 <body>
 
-  <a class="skip-link" href="#main-content">本文へスキップ</a>
+  <a class="skip-link" href="#main-content" data-i18n="common.skipLink">本文へスキップ</a>
 
   <div class="masthead">
     <div class="wrap masthead-inner">
@@ -45,13 +45,18 @@
           <a href="camp.html">Camp</a>
           <a href="making.html">Making</a>
         </div>
-        <button type="button" class="icon-button search-toggle" aria-expanded="false" aria-controls="search-panel" aria-label="サイト内検索を開く">
+        <button type="button" class="icon-button search-toggle" aria-expanded="false" aria-controls="search-panel" aria-label="サイト内検索を開く" data-i18n-aria-label="common.searchToggleLabel">
           <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
             <circle cx="10.5" cy="10.5" r="6" fill="none" stroke="currentColor" stroke-width="1.6"/>
             <line x1="15" y1="15" x2="20" y2="20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
           </svg>
         </button>
-        <button type="button" class="icon-button theme-toggle" aria-pressed="false" aria-label="ダークモードを切り替える">
+        <div class="lang-toggle" role="group" aria-label="言語切り替え" data-i18n-aria-label="common.langToggleLabel">
+          <button type="button" class="lang-option" data-lang="ja" aria-pressed="true">JP</button>
+          <span class="lang-sep">/</span>
+          <button type="button" class="lang-option" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <button type="button" class="icon-button theme-toggle" aria-pressed="false" aria-label="ダークモードを切り替える" data-i18n-aria-label="common.themeToggleLabel">
           <svg class="icon-moon" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
           <svg class="icon-sun" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
             <circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
@@ -67,7 +72,7 @@
             </g>
           </svg>
         </button>
-        <button type="button" class="icon-button nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="メニューを開く">
+        <button type="button" class="icon-button nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="メニューを開く" data-i18n-aria-label="common.navToggleLabel">
           <svg class="icon-bars" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
             <line x1="4" y1="7" x2="20" y2="7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
             <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
@@ -80,8 +85,8 @@
         </button>
         <div class="search-panel" id="search-panel" hidden>
           <div class="search-panel-inner">
-            <input type="search" class="search-input" placeholder="サイト内を検索" aria-label="サイト内検索">
-            <button type="button" class="search-close" aria-label="検索を閉じる">&times;</button>
+            <input type="search" class="search-input" placeholder="サイト内を検索" aria-label="サイト内検索" data-i18n-placeholder="common.searchPlaceholder" data-i18n-aria-label="common.searchLabel">
+            <button type="button" class="search-close" aria-label="検索を閉じる" data-i18n-aria-label="common.searchCloseLabel">&times;</button>
           </div>
           <ul class="search-results"></ul>
         </div>
@@ -110,15 +115,15 @@
       <span class="kicker">Motorsport</span>
       <h1 class="article-title">F1</h1>
       <div class="article-meta">
-        <span>テレビ観戦</span>
-        <span>応援チーム: アストンマーチン・ホンダ</span>
+        <span data-i18n="f1.metaWatch">テレビ観戦</span>
+        <span data-i18n="f1.metaTeam">応援チーム: アストンマーチン・ホンダ</span>
       </div>
     </div>
   </header>
 
   <div class="wrap">
     <figure class="article-photo reveal">
-      <svg viewBox="0 0 400 200" role="img" aria-label="F1マシンのイラスト">
+      <svg viewBox="0 0 400 200" role="img" aria-label="F1マシンのイラスト" data-i18n-aria-label="f1.illustAlt">
         <line x1="10" y1="170" x2="390" y2="170" stroke="currentColor" stroke-width="2"/>
         <path d="M55,150 L100,150 L128,120 L232,120 L252,104 L305,104 L322,120 L345,120 L345,150 L55,150 Z" fill="none" stroke="currentColor" stroke-width="2"/>
         <rect x="152" y="122" width="42" height="9" fill="#a63d40"/>
@@ -134,18 +139,18 @@
     </figure>
 
     <div class="article-body">
-      <p class="reveal">きっかけは、サッカー観戦のためにDAZNを契約したときにF1も見られることを知り、試しに観てみたことです。最初は何となく観始めましたが、スピード感や戦略の読み合いにすぐ引き込まれ、今ではテレビ観戦が中心の趣味になっています。</p>
-      <p class="reveal">応援しているチームはアストンマーチン・ホンダです。ホンダが好きなことが大きな理由ですが、チームカラーのグリーンとライムの組み合わせも個人的には好みです。応援するたびに、技術とデザインの両方にワクワクします。</p>
-      <p class="reveal">最も印象に残っているシーズンは、レッドブル・ホンダとして初めてチャンピオンを獲得した年です。あのときのレース展開と歓喜の瞬間は、今でも録画を見返したくなるほど強く心に残っています。</p>
-      <p class="reveal">好きなドライバーはマックス・フェルスタッペンで、彼の攻めの走りや勝負強さに魅力を感じています。特に雨のレースや最後尾からの追い上げは、応援していて手に汗を握る瞬間です。</p>
+      <p class="reveal" data-i18n="f1.p1">きっかけは、サッカー観戦のためにDAZNを契約したときにF1も見られることを知り、試しに観てみたことです。最初は何となく観始めましたが、スピード感や戦略の読み合いにすぐ引き込まれ、今ではテレビ観戦が中心の趣味になっています。</p>
+      <p class="reveal" data-i18n="f1.p2">応援しているチームはアストンマーチン・ホンダです。ホンダが好きなことが大きな理由ですが、チームカラーのグリーンとライムの組み合わせも個人的には好みです。応援するたびに、技術とデザインの両方にワクワクします。</p>
+      <p class="reveal" data-i18n="f1.p3">最も印象に残っているシーズンは、レッドブル・ホンダとして初めてチャンピオンを獲得した年です。あのときのレース展開と歓喜の瞬間は、今でも録画を見返したくなるほど強く心に残っています。</p>
+      <p class="reveal" data-i18n="f1.p4">好きなドライバーはマックス・フェルスタッペンで、彼の攻めの走りや勝負強さに魅力を感じています。特に雨のレースや最後尾からの追い上げは、応援していて手に汗を握る瞬間です。</p>
     </div>
 
     <div class="share reveal">
       <span class="share-label">Share</span>
-      <a class="icon-button" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fmatatabi3126.github.io%2Fmy-first-site%2Ff1.html&text=F1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E6%9B%B8%E3%81%8D%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82%E5%BF%9C%E6%8F%B4%E3%83%81%E3%83%BC%E3%83%A0%E3%81%AF%E3%82%A2%E3%82%B9%E3%83%88%E3%83%B3%E3%83%9E%E3%83%BC%E3%83%81%E3%83%B3%E3%83%BB%E3%83%9B%E3%83%B3%E3%83%80%E3%81%A7%E3%81%99%E3%80%82" target="_blank" rel="noopener noreferrer" aria-label="Xでシェア">
+      <a class="icon-button" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fmatatabi3126.github.io%2Fmy-first-site%2Ff1.html&text=F1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E6%9B%B8%E3%81%8D%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82%E5%BF%9C%E6%8F%B4%E3%83%81%E3%83%BC%E3%83%A0%E3%81%AF%E3%82%A2%E3%82%B9%E3%83%88%E3%83%B3%E3%83%9E%E3%83%BC%E3%83%81%E3%83%B3%E3%83%BB%E3%83%9B%E3%83%B3%E3%83%80%E3%81%A7%E3%81%99%E3%80%82" target="_blank" rel="noopener noreferrer" aria-label="Xでシェア" data-i18n-aria-label="common.shareXLabel" data-i18n-href="f1.shareXHref">
         <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M18.9 2H22l-7.4 8.5L23 22h-6.9l-5.4-6.9L4.6 22H1.5l7.9-9L1 2h7l4.9 6.3L18.9 2Zm-1.2 18h1.9L6.4 4H4.4l13.3 16Z"/></svg>
       </a>
-      <a class="icon-button" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Fmatatabi3126.github.io%2Fmy-first-site%2Ff1.html&text=F1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E6%9B%B8%E3%81%8D%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82%E5%BF%9C%E6%8F%B4%E3%83%81%E3%83%BC%E3%83%A0%E3%81%AF%E3%82%A2%E3%82%B9%E3%83%88%E3%83%B3%E3%83%9E%E3%83%BC%E3%83%81%E3%83%B3%E3%83%BB%E3%83%9B%E3%83%B3%E3%83%80%E3%81%A7%E3%81%99%E3%80%82" target="_blank" rel="noopener noreferrer" aria-label="LINEでシェア">
+      <a class="icon-button" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Fmatatabi3126.github.io%2Fmy-first-site%2Ff1.html&text=F1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E6%9B%B8%E3%81%8D%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82%E5%BF%9C%E6%8F%B4%E3%83%81%E3%83%BC%E3%83%A0%E3%81%AF%E3%82%A2%E3%82%B9%E3%83%88%E3%83%B3%E3%83%9E%E3%83%BC%E3%83%81%E3%83%B3%E3%83%BB%E3%83%9B%E3%83%B3%E3%83%80%E3%81%A7%E3%81%99%E3%80%82" target="_blank" rel="noopener noreferrer" aria-label="LINEでシェア" data-i18n-aria-label="common.shareLineLabel" data-i18n-href="f1.shareLineHref">
         <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M4 5.5h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9l-4 3v-3H4a1 1 0 0 1-1-1v-10a1 1 0 0 1 1-1Z"/></svg>
       </a>
     </div>
@@ -154,16 +159,16 @@
   <section class="wrap gallery reveal">
     <h2 class="kicker">Gallery</h2>
     <div class="gallery-grid">
-      <button type="button" class="gallery-item" data-caption="ヘルメット">
+      <button type="button" class="gallery-item">
         <svg viewBox="0 0 200 200" aria-hidden="true">
           <path d="M100,50 L100,40 M85,52 L80,42 M115,52 L120,42" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
           <path d="M40,120 C40,80 65,50 100,50 C135,50 160,80 160,120 L160,135 C160,142 154,148 147,148 L53,148 C46,148 40,142 40,135 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
           <path d="M60,100 L140,100 L145,130 L55,130 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
           <line x1="60" y1="115" x2="140" y2="115" stroke="currentColor" stroke-width="1.5"/>
         </svg>
-        <span class="gallery-item-label">ヘルメット</span>
+        <span class="gallery-item-label" data-i18n="f1.galleryHelmet">ヘルメット</span>
       </button>
-      <button type="button" class="gallery-item" data-caption="チェッカーフラッグ">
+      <button type="button" class="gallery-item">
         <svg viewBox="0 0 200 200" aria-hidden="true">
           <line x1="58" y1="40" x2="58" y2="170" stroke="currentColor" stroke-width="2"/>
           <rect x="60" y="46" width="90" height="54" fill="none" stroke="currentColor" stroke-width="2"/>
@@ -179,9 +184,9 @@
             <rect x="120" y="82" width="15" height="18"/>
           </g>
         </svg>
-        <span class="gallery-item-label">チェッカーフラッグ</span>
+        <span class="gallery-item-label" data-i18n="f1.galleryFlag">チェッカーフラッグ</span>
       </button>
-      <button type="button" class="gallery-item" data-caption="表彰台">
+      <button type="button" class="gallery-item">
         <svg viewBox="0 0 200 200" aria-hidden="true">
           <rect x="30" y="115" width="40" height="35" fill="none" stroke="currentColor" stroke-width="2"/>
           <rect x="80" y="90" width="40" height="60" fill="none" stroke="currentColor" stroke-width="2"/>
@@ -191,15 +196,15 @@
           <text x="100" y="122" font-size="16" text-anchor="middle" fill="currentColor" font-family="sans-serif">1</text>
           <text x="150" y="145" font-size="12" text-anchor="middle" fill="currentColor" font-family="sans-serif">3</text>
         </svg>
-        <span class="gallery-item-label">表彰台</span>
+        <span class="gallery-item-label" data-i18n="f1.galleryPodium">表彰台</span>
       </button>
     </div>
   </section>
 
   <div class="lightbox" id="lightbox" hidden>
     <div class="lightbox-backdrop" data-lightbox-close></div>
-    <div class="lightbox-panel" role="dialog" aria-modal="true" aria-label="イラスト拡大表示">
-      <button type="button" class="lightbox-close" data-lightbox-close aria-label="閉じる">&times;</button>
+    <div class="lightbox-panel" role="dialog" aria-modal="true" aria-label="イラスト拡大表示" data-i18n-aria-label="common.lightboxLabel">
+      <button type="button" class="lightbox-close" data-lightbox-close aria-label="閉じる" data-i18n-aria-label="common.lightboxCloseLabel">&times;</button>
       <div class="lightbox-art"></div>
       <p class="lightbox-caption"></p>
     </div>
@@ -211,6 +216,7 @@
     &copy; 2026 caccio
   </footer>
 
+  <script src="lang.js" defer></script>
   <script src="scroll-animate.js" defer></script>
   <script src="theme.js" defer></script>
   <script src="gallery.js" defer></script>

@@ -12,7 +12,8 @@
     if (!svg) return;
     art.innerHTML = '';
     art.appendChild(svg.cloneNode(true));
-    caption.textContent = button.dataset.caption || '';
+    var label = button.querySelector('.gallery-item-label');
+    caption.textContent = label ? label.textContent : '';
     lastFocused = document.activeElement;
     lightbox.hidden = false;
     document.body.style.overflow = 'hidden';

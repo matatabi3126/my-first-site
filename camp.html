@@ -13,16 +13,16 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#a63d40">
-<title>キャンプ - caccio</title>
+<title data-i18n="camp.title">キャンプ - caccio</title>
 <meta property="og:type" content="website">
-<meta property="og:title" content="キャンプ - caccio">
-<meta property="og:description" content="社会人になってから始めたキャンプ。妻や父親と共に、青山高原などで焚き火を囲む時間を楽しんでいます。">
+<meta property="og:title" content="キャンプ - caccio" data-i18n-content="camp.title">
+<meta property="og:description" content="社会人になってから始めたキャンプ。妻や父親と共に、青山高原などで焚き火を囲む時間を楽しんでいます。" data-i18n-content="camp.ogDescription">
 <meta property="og:image" content="https://matatabi3126.github.io/my-first-site/profile.JPG">
 <meta property="og:url" content="https://matatabi3126.github.io/my-first-site/camp.html">
 <meta property="og:site_name" content="caccio's Profile">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="キャンプ - caccio">
-<meta name="twitter:description" content="社会人になってから始めたキャンプ。妻や父親と共に、青山高原などで焚き火を囲む時間を楽しんでいます。">
+<meta name="twitter:title" content="キャンプ - caccio" data-i18n-content="camp.title">
+<meta name="twitter:description" content="社会人になってから始めたキャンプ。妻や父親と共に、青山高原などで焚き火を囲む時間を楽しんでいます。" data-i18n-content="camp.ogDescription">
 <meta name="twitter:image" content="https://matatabi3126.github.io/my-first-site/profile.JPG">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,7 +32,7 @@
 </head>
 <body>
 
-  <a class="skip-link" href="#main-content">本文へスキップ</a>
+  <a class="skip-link" href="#main-content" data-i18n="common.skipLink">本文へスキップ</a>
 
   <div class="masthead">
     <div class="wrap masthead-inner">
@@ -45,13 +45,18 @@
           <a href="camp.html" aria-current="page">Camp</a>
           <a href="making.html">Making</a>
         </div>
-        <button type="button" class="icon-button search-toggle" aria-expanded="false" aria-controls="search-panel" aria-label="サイト内検索を開く">
+        <button type="button" class="icon-button search-toggle" aria-expanded="false" aria-controls="search-panel" aria-label="サイト内検索を開く" data-i18n-aria-label="common.searchToggleLabel">
           <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
             <circle cx="10.5" cy="10.5" r="6" fill="none" stroke="currentColor" stroke-width="1.6"/>
             <line x1="15" y1="15" x2="20" y2="20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
           </svg>
         </button>
-        <button type="button" class="icon-button theme-toggle" aria-pressed="false" aria-label="ダークモードを切り替える">
+        <div class="lang-toggle" role="group" aria-label="言語切り替え" data-i18n-aria-label="common.langToggleLabel">
+          <button type="button" class="lang-option" data-lang="ja" aria-pressed="true">JP</button>
+          <span class="lang-sep">/</span>
+          <button type="button" class="lang-option" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <button type="button" class="icon-button theme-toggle" aria-pressed="false" aria-label="ダークモードを切り替える" data-i18n-aria-label="common.themeToggleLabel">
           <svg class="icon-moon" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
           <svg class="icon-sun" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
             <circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
@@ -67,7 +72,7 @@
             </g>
           </svg>
         </button>
-        <button type="button" class="icon-button nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="メニューを開く">
+        <button type="button" class="icon-button nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="メニューを開く" data-i18n-aria-label="common.navToggleLabel">
           <svg class="icon-bars" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
             <line x1="4" y1="7" x2="20" y2="7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
             <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
@@ -80,8 +85,8 @@
         </button>
         <div class="search-panel" id="search-panel" hidden>
           <div class="search-panel-inner">
-            <input type="search" class="search-input" placeholder="サイト内を検索" aria-label="サイト内検索">
-            <button type="button" class="search-close" aria-label="検索を閉じる">&times;</button>
+            <input type="search" class="search-input" placeholder="サイト内を検索" aria-label="サイト内検索" data-i18n-placeholder="common.searchPlaceholder" data-i18n-aria-label="common.searchLabel">
+            <button type="button" class="search-close" aria-label="検索を閉じる" data-i18n-aria-label="common.searchCloseLabel">&times;</button>
           </div>
           <ul class="search-results"></ul>
         </div>
@@ -102,18 +107,18 @@
         </svg>
       </div>
       <span class="kicker">Outdoor</span>
-      <h1 class="article-title">キャンプ</h1>
+      <h1 class="article-title" data-i18n="camp.h1">キャンプ</h1>
       <div class="article-meta">
-        <span>年数回開催</span>
-        <span>青山高原ほか</span>
-        <span>Since 社会人</span>
+        <span data-i18n="camp.metaFreq">年数回開催</span>
+        <span data-i18n="camp.metaPlace">青山高原ほか</span>
+        <span data-i18n="camp.metaSince">Since 社会人</span>
       </div>
     </div>
   </header>
 
   <div class="wrap">
     <figure class="article-photo reveal">
-      <svg viewBox="0 0 400 240" role="img" aria-label="キャンプのイラスト">
+      <svg viewBox="0 0 400 240" role="img" aria-label="キャンプのイラスト" data-i18n-aria-label="camp.illustAlt">
         <polyline points="20,190 90,95 140,150 205,60 265,150 325,105 380,190" fill="none" stroke="currentColor" stroke-width="2"/>
         <line x1="10" y1="190" x2="390" y2="190" stroke="currentColor" stroke-width="2"/>
         <path d="M160,190 L202,105 L244,190 Z" fill="none" stroke="currentColor" stroke-width="2.5"/>
@@ -125,9 +130,9 @@
     </figure>
 
     <div class="article-body">
-      <p class="reveal">社会人になってからアニメの影響でキャンプを始め、最初の頃は一人で道具をそろえて森や川辺を巡りました。ひとりで火を起こして食事を作る時間が、自分のペースで過ごせる大切な時間になっていました。</p>
-      <p class="reveal">その後は妻と一緒に出かけるようになり、二人でテントを張って薪を割る時間が思い出に残っています。特に夕暮れ時に焚き火を囲んで話したひとときは、今でも鮮明に覚えています。</p>
-      <p class="reveal">子供が生まれてからは以前よりキャンプに行く機会が少なくなりましたが、最近は父と一緒に数ヶ月に一度のペースで出かけています。次回は青山高原にある標高700〜800mのキャンプ地を予定しており、久しぶりの高地での空気を楽しみにしています。</p>
+      <p class="reveal" data-i18n="camp.p1">社会人になってからアニメの影響でキャンプを始め、最初の頃は一人で道具をそろえて森や川辺を巡りました。ひとりで火を起こして食事を作る時間が、自分のペースで過ごせる大切な時間になっていました。</p>
+      <p class="reveal" data-i18n="camp.p2">その後は妻と一緒に出かけるようになり、二人でテントを張って薪を割る時間が思い出に残っています。特に夕暮れ時に焚き火を囲んで話したひとときは、今でも鮮明に覚えています。</p>
+      <p class="reveal" data-i18n="camp.p3">子供が生まれてからは以前よりキャンプに行く機会が少なくなりましたが、最近は父と一緒に数ヶ月に一度のペースで出かけています。次回は青山高原にある標高700〜800mのキャンプ地を予定しており、久しぶりの高地での空気を楽しみにしています。</p>
 
       <figure class="map-embed reveal">
         <iframe
@@ -135,19 +140,19 @@
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
-          title="青山高原の地図"></iframe>
+          title="青山高原の地図" data-i18n-title="camp.mapTitle"></iframe>
         <figcaption>Map — Aoyama Highlands</figcaption>
       </figure>
 
-      <p class="reveal">将来的には、子供と一緒にテントを張りながら過ごせるようなキャンプを実現したいと考えています。</p>
+      <p class="reveal" data-i18n="camp.p4">将来的には、子供と一緒にテントを張りながら過ごせるようなキャンプを実現したいと考えています。</p>
     </div>
 
     <div class="share reveal">
       <span class="share-label">Share</span>
-      <a class="icon-button" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fmatatabi3126.github.io%2Fmy-first-site%2Fcamp.html&text=%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%97%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E6%9B%B8%E3%81%8D%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82%E9%9D%92%E5%B1%B1%E9%AB%98%E5%8E%9F%E3%81%AA%E3%81%A9%E4%B8%89%E9%87%8D%E7%9C%8C%E5%91%A8%E8%BE%BA%E3%81%A7%E7%84%9A%E3%81%8D%E7%81%AB%E3%82%92%E6%A5%BD%E3%81%97%E3%82%93%E3%81%A7%E3%81%84%E3%81%BE%E3%81%99%E3%80%82" target="_blank" rel="noopener noreferrer" aria-label="Xでシェア">
+      <a class="icon-button" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fmatatabi3126.github.io%2Fmy-first-site%2Fcamp.html&text=%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%97%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E6%9B%B8%E3%81%8D%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82%E9%9D%92%E5%B1%B1%E9%AB%98%E5%8E%9F%E3%81%AA%E3%81%A9%E4%B8%89%E9%87%8D%E7%9C%8C%E5%91%A8%E8%BE%BA%E3%81%A7%E7%84%9A%E3%81%8D%E7%81%AB%E3%82%92%E6%A5%BD%E3%81%97%E3%82%93%E3%81%A7%E3%81%84%E3%81%BE%E3%81%99%E3%80%82" target="_blank" rel="noopener noreferrer" aria-label="Xでシェア" data-i18n-aria-label="common.shareXLabel" data-i18n-href="camp.shareXHref">
         <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M18.9 2H22l-7.4 8.5L23 22h-6.9l-5.4-6.9L4.6 22H1.5l7.9-9L1 2h7l4.9 6.3L18.9 2Zm-1.2 18h1.9L6.4 4H4.4l13.3 16Z"/></svg>
       </a>
-      <a class="icon-button" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Fmatatabi3126.github.io%2Fmy-first-site%2Fcamp.html&text=%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%97%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E6%9B%B8%E3%81%8D%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82%E9%9D%92%E5%B1%B1%E9%AB%98%E5%8E%9F%E3%81%AA%E3%81%A9%E4%B8%89%E9%87%8D%E7%9C%8C%E5%91%A8%E8%BE%BA%E3%81%A7%E7%84%9A%E3%81%8D%E7%81%AB%E3%82%92%E6%A5%BD%E3%81%97%E3%82%93%E3%81%A7%E3%81%84%E3%81%BE%E3%81%99%E3%80%82" target="_blank" rel="noopener noreferrer" aria-label="LINEでシェア">
+      <a class="icon-button" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Fmatatabi3126.github.io%2Fmy-first-site%2Fcamp.html&text=%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%97%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E6%9B%B8%E3%81%8D%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82%E9%9D%92%E5%B1%B1%E9%AB%98%E5%8E%9F%E3%81%AA%E3%81%A9%E4%B8%89%E9%87%8D%E7%9C%8C%E5%91%A8%E8%BE%BA%E3%81%A7%E7%84%9A%E3%81%8D%E7%81%AB%E3%82%92%E6%A5%BD%E3%81%97%E3%82%93%E3%81%A7%E3%81%84%E3%81%BE%E3%81%99%E3%80%82" target="_blank" rel="noopener noreferrer" aria-label="LINEでシェア" data-i18n-aria-label="common.shareLineLabel" data-i18n-href="camp.shareLineHref">
         <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M4 5.5h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9l-4 3v-3H4a1 1 0 0 1-1-1v-10a1 1 0 0 1 1-1Z"/></svg>
       </a>
     </div>
@@ -156,7 +161,7 @@
   <section class="wrap gallery reveal">
     <h2 class="kicker">Gallery</h2>
     <div class="gallery-grid">
-      <button type="button" class="gallery-item" data-caption="テント">
+      <button type="button" class="gallery-item">
         <svg viewBox="0 0 200 200" aria-hidden="true">
           <path d="M100,50 L160,150 L40,150 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
           <line x1="100" y1="50" x2="100" y2="150" stroke="currentColor" stroke-width="1.5"/>
@@ -164,9 +169,9 @@
           <line x1="20" y1="150" x2="180" y2="150" stroke="currentColor" stroke-width="2"/>
           <path d="M40,150 L25,165 M160,150 L175,165" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
         </svg>
-        <span class="gallery-item-label">テント</span>
+        <span class="gallery-item-label" data-i18n="camp.galleryTent">テント</span>
       </button>
-      <button type="button" class="gallery-item" data-caption="ランタン">
+      <button type="button" class="gallery-item">
         <svg viewBox="0 0 200 200" aria-hidden="true">
           <path d="M92,50 L92,40 L108,40 L108,50" fill="none" stroke="currentColor" stroke-width="2"/>
           <line x1="100" y1="30" x2="100" y2="40" stroke="currentColor" stroke-width="2"/>
@@ -176,23 +181,23 @@
           <line x1="75" y1="120" x2="125" y2="120" stroke="currentColor" stroke-width="1.5"/>
           <path d="M95,100 C95,95 105,95 105,100 C105,105 95,108 95,112 C95,116 105,116 105,112" fill="none" stroke="currentColor" stroke-width="1.5"/>
         </svg>
-        <span class="gallery-item-label">ランタン</span>
+        <span class="gallery-item-label" data-i18n="camp.galleryLantern">ランタン</span>
       </button>
-      <button type="button" class="gallery-item" data-caption="山の稜線">
+      <button type="button" class="gallery-item">
         <svg viewBox="0 0 200 200" aria-hidden="true">
           <circle cx="150" cy="55" r="12" fill="none" stroke="currentColor" stroke-width="1.5"/>
           <polyline points="15,150 55,90 85,120 110,60 140,110 165,85 185,150" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
           <line x1="10" y1="150" x2="190" y2="150" stroke="currentColor" stroke-width="2"/>
         </svg>
-        <span class="gallery-item-label">山の稜線</span>
+        <span class="gallery-item-label" data-i18n="camp.galleryRidge">山の稜線</span>
       </button>
     </div>
   </section>
 
   <div class="lightbox" id="lightbox" hidden>
     <div class="lightbox-backdrop" data-lightbox-close></div>
-    <div class="lightbox-panel" role="dialog" aria-modal="true" aria-label="イラスト拡大表示">
-      <button type="button" class="lightbox-close" data-lightbox-close aria-label="閉じる">&times;</button>
+    <div class="lightbox-panel" role="dialog" aria-modal="true" aria-label="イラスト拡大表示" data-i18n-aria-label="common.lightboxLabel">
+      <button type="button" class="lightbox-close" data-lightbox-close aria-label="閉じる" data-i18n-aria-label="common.lightboxCloseLabel">&times;</button>
       <div class="lightbox-art"></div>
       <p class="lightbox-caption"></p>
     </div>
@@ -204,6 +209,7 @@
     &copy; 2026 caccio
   </footer>
 
+  <script src="lang.js" defer></script>
   <script src="scroll-animate.js" defer></script>
   <script src="theme.js" defer></script>
   <script src="gallery.js" defer></script>

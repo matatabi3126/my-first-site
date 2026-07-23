@@ -2,33 +2,48 @@
   var SEARCH_INDEX = [
     {
       url: 'index.html',
-      title: "caccio's Profile",
-      heading: 'caccio',
-      content: '三重県生まれ。大学生の時に愛知県へ移り、大学卒業後はそのまま愛知の病院で医療事務として就職しました。その後、職場の転勤をきっかけに三重県へ戻り、現在に至ります。三重県在住、35歳。 フットサル 毎週金曜日に練習をしています。 F1 テレビ観戦が中心です。 キャンプ 数年前によく行っていましたが、子供が生まれてからは頻度が減りました。最近は父親と一緒に数ヶ月に一度のペースで楽しんでいます。'
+      title: { ja: "caccio's Profile", en: "caccio's Profile" },
+      heading: { ja: 'caccio', en: 'caccio' },
+      content: {
+        ja: '三重県生まれ。大学生の時に愛知県へ移り、大学卒業後はそのまま愛知の病院で医療事務として就職しました。その後、職場の転勤をきっかけに三重県へ戻り、現在に至ります。三重県在住、35歳。 フットサル 毎週金曜日に練習をしています。 F1 テレビ観戦が中心です。 キャンプ 数年前によく行っていましたが、子供が生まれてからは頻度が減りました。最近は父親と一緒に数ヶ月に一度のペースで楽しんでいます。',
+        en: "Born in Mie Prefecture. I moved to Aichi for university and started working in medical office administration at a hospital there. A job transfer later brought me back to Mie, where I still live today. Mie Prefecture, 35 years old. Futsal: I practice every Friday. F1: mostly watching on TV. Camping: I used to go often a few years ago, less frequent since having kids, lately with my father every couple of months."
+      }
     },
     {
       url: 'futsal.html',
-      title: 'フットサル - caccio',
-      heading: 'フットサル',
-      content: '小学生の頃にサッカースクールでボールを蹴り始め、そこから中学では部活動で大会に出場した経験があります。あの頃は毎週の練習がすべてで、仲間との連携が少しずつ形になるのが楽しかったです。社会人になってからはフットサルチームに所属し、現在は少人数で毎週金曜日に集まって練習しています。今はメンバーが少なく、ほとんど個人練習に近い形になっていますが、パスやシュート、体の使い方を確認する時間として大事にしています。人数がそろえば試合形式の活動もしたいと考えており、次は外部のチームと軽めのゲームを組めるように声をかけているところです。少しずつでも仲間を増やして、コートでの緊張感を取り戻したいと思っています。'
+      title: { ja: 'フットサル - caccio', en: 'Futsal - caccio' },
+      heading: { ja: 'フットサル', en: 'Futsal' },
+      content: {
+        ja: '小学生の頃にサッカースクールでボールを蹴り始め、そこから中学では部活動で大会に出場した経験があります。あの頃は毎週の練習がすべてで、仲間との連携が少しずつ形になるのが楽しかったです。社会人になってからはフットサルチームに所属し、現在は少人数で毎週金曜日に集まって練習しています。今はメンバーが少なく、ほとんど個人練習に近い形になっていますが、パスやシュート、体の使い方を確認する時間として大事にしています。人数がそろえば試合形式の活動もしたいと考えており、次は外部のチームと軽めのゲームを組めるように声をかけているところです。少しずつでも仲間を増やして、コートでの緊張感を取り戻したいと思っています。',
+        en: "I started kicking a ball around at a soccer school in elementary school and went on to compete in tournaments through my school's club in junior high. After becoming a working adult I joined a futsal team, and these days a small group of us gets together every Friday to practice, working on passing, shooting, and body movement. Once we have enough players I'd like to start doing actual matches, and I'm reaching out to outside teams about arranging a casual game."
+      }
     },
     {
       url: 'camp.html',
-      title: 'キャンプ - caccio',
-      heading: 'キャンプ',
-      content: '社会人になってからアニメの影響でキャンプを始め、最初の頃は一人で道具をそろえて森や川辺を巡りました。ひとりで火を起こして食事を作る時間が、自分のペースで過ごせる大切な時間になっていました。その後は妻と一緒に出かけるようになり、二人でテントを張って薪を割る時間が思い出に残っています。特に夕暮れ時に焚き火を囲んで話したひとときは、今でも鮮明に覚えています。子供が生まれてからは以前よりキャンプに行く機会が少なくなりましたが、最近は父と一緒に数ヶ月に一度のペースで出かけています。次回は青山高原にある標高700〜800mのキャンプ地を予定しており、久しぶりの高地での空気を楽しみにしています。将来的には、子供と一緒にテントを張りながら過ごせるようなキャンプを実現したいと考えています。'
+      title: { ja: 'キャンプ - caccio', en: 'Camp - caccio' },
+      heading: { ja: 'キャンプ', en: 'Camping' },
+      content: {
+        ja: '社会人になってからアニメの影響でキャンプを始め、最初の頃は一人で道具をそろえて森や川辺を巡りました。ひとりで火を起こして食事を作る時間が、自分のペースで過ごせる大切な時間になっていました。その後は妻と一緒に出かけるようになり、二人でテントを張って薪を割る時間が思い出に残っています。特に夕暮れ時に焚き火を囲んで話したひとときは、今でも鮮明に覚えています。子供が生まれてからは以前よりキャンプに行く機会が少なくなりましたが、最近は父と一緒に数ヶ月に一度のペースで出かけています。次回は青山高原にある標高700〜800mのキャンプ地を予定しており、久しぶりの高地での空気を楽しみにしています。将来的には、子供と一緒にテントを張りながら過ごせるようなキャンプを実現したいと考えています。',
+        en: "I started camping after becoming a working adult, inspired by an anime, gathering my own gear and exploring forests and riverbanks alone. Later I started going with my wife, pitching a tent and splitting firewood, and talking around the campfire at dusk. Since having kids I don't get to go as often, but lately I've been going with my father every couple of months, with a trip to the Aoyama Highlands planned next. Looking ahead, I'd like to go camping with my kids someday too."
+      }
     },
     {
       url: 'f1.html',
-      title: 'F1 - caccio',
-      heading: 'F1',
-      content: 'きっかけは、サッカー観戦のためにDAZNを契約したときにF1も見られることを知り、試しに観てみたことです。最初は何となく観始めましたが、スピード感や戦略の読み合いにすぐ引き込まれ、今ではテレビ観戦が中心の趣味になっています。応援しているチームはアストンマーチン・ホンダです。ホンダが好きなことが大きな理由ですが、チームカラーのグリーンとライムの組み合わせも個人的には好みです。応援するたびに、技術とデザインの両方にワクワクします。最も印象に残っているシーズンは、レッドブル・ホンダとして初めてチャンピオンを獲得した年です。あのときのレース展開と歓喜の瞬間は、今でも録画を見返したくなるほど強く心に残っています。好きなドライバーはマックス・フェルスタッペンで、彼の攻めの走りや勝負強さに魅力を感じています。特に雨のレースや最後尾からの追い上げは、応援していて手に汗を握る瞬間です。'
+      title: { ja: 'F1 - caccio', en: 'F1 - caccio' },
+      heading: { ja: 'F1', en: 'F1' },
+      content: {
+        ja: 'きっかけは、サッカー観戦のためにDAZNを契約したときにF1も見られることを知り、試しに観てみたことです。最初は何となく観始めましたが、スピード感や戦略の読み合いにすぐ引き込まれ、今ではテレビ観戦が中心の趣味になっています。応援しているチームはアストンマーチン・ホンダです。ホンダが好きなことが大きな理由ですが、チームカラーのグリーンとライムの組み合わせも個人的には好みです。応援するたびに、技術とデザインの両方にワクワクします。最も印象に残っているシーズンは、レッドブル・ホンダとして初めてチャンピオンを獲得した年です。あのときのレース展開と歓喜の瞬間は、今でも録画を見返したくなるほど強く心に残っています。好きなドライバーはマックス・フェルスタッペンで、彼の攻めの走りや勝負強さに魅力を感じています。特に雨のレースや最後尾からの追い上げは、応援していて手に汗を握る瞬間です。',
+        en: "It started when I signed up for DAZN to watch soccer and discovered I could watch F1 too. I was quickly drawn in by the speed and strategy, and now watching on TV is one of my main hobbies. I support Aston Martin Honda, largely because I like Honda, and I'm also fond of the team's green and lime colors. The season that left the biggest impression was when Red Bull Honda won the championship for the first time. My favorite driver is Max Verstappen, and I love his aggressive driving, especially in wet-weather races and comebacks from the back of the grid."
+      }
     },
     {
       url: 'making.html',
-      title: 'Making - caccio',
-      heading: 'Making',
-      content: 'プログラミングは全くの未経験でしたが、Claude CodeというAIコーディングツールを使い始めたことがきっかけで、このサイトを自分の手で作ってみることにしました。使っている技術はHTML・CSS・JavaScriptといった基本的なWeb技術で、特別なフレームワークは使っていません。バージョン管理にはGitとGitHubを利用し、公開にはGitHub Pagesという無料のホスティングサービスを使っています。制作はまず環境構築から始め、基本的なページを作って公開し、フィードバックをもらいながら改善を重ね、途中でデザインを雑誌風のスタイルに刷新しました。その後もスクロールアニメーションやダークモード、サイト内検索、PWA対応など機能を一つずつ追加してきました。コードが読めなくても実現したいことを言葉にできれば形にできることを学びました。'
+      title: { ja: 'Making - caccio', en: 'Making - caccio' },
+      heading: { ja: 'Making', en: 'Making' },
+      content: {
+        ja: 'プログラミングは全くの未経験でしたが、Claude CodeというAIコーディングツールを使い始めたことがきっかけで、このサイトを自分の手で作ってみることにしました。使っている技術はHTML・CSS・JavaScriptといった基本的なWeb技術で、特別なフレームワークは使っていません。バージョン管理にはGitとGitHubを利用し、公開にはGitHub Pagesという無料のホスティングサービスを使っています。制作はまず環境構築から始め、基本的なページを作って公開し、フィードバックをもらいながら改善を重ね、途中でデザインを雑誌風のスタイルに刷新しました。その後もスクロールアニメーションやダークモード、サイト内検索、PWA対応など機能を一つずつ追加してきました。コードが読めなくても実現したいことを言葉にできれば形にできることを学びました。',
+        en: "I had zero programming experience, but starting to use an AI coding tool called Claude Code is what got me to try building this site myself. It's built with basic web technology, HTML, CSS, and JavaScript, with no special framework. I use Git and GitHub for version control and GitHub Pages, a free hosting service, to publish it. I started with a basic profile page, then kept improving it with feedback, redesigned it into a magazine style, and added features one at a time: scroll animations, dark mode, site search, PWA support. I learned that even without reading code, putting what you want into words is enough to make it happen."
+      }
     }
   ];
 
@@ -62,21 +77,29 @@
     return escapeHtml(before) + '<mark>' + escapeHtml(match) + '</mark>' + escapeHtml(after);
   }
 
+  function currentLang() {
+    return (window.CACCIO_I18N && window.CACCIO_I18N.getLang()) || 'ja';
+  }
+
   function search(query) {
     query = query.trim();
     if (!query) return [];
+    var lang = currentLang();
     var lowerQuery = query.toLowerCase();
     var results = [];
     SEARCH_INDEX.forEach(function (page) {
-      var inContent = page.content.toLowerCase().indexOf(lowerQuery) !== -1;
-      var inHeading = page.heading.toLowerCase().indexOf(lowerQuery) !== -1;
-      var inTitle = page.title.toLowerCase().indexOf(lowerQuery) !== -1;
+      var title = page.title[lang];
+      var heading = page.heading[lang];
+      var content = page.content[lang];
+      var inContent = content.toLowerCase().indexOf(lowerQuery) !== -1;
+      var inHeading = heading.toLowerCase().indexOf(lowerQuery) !== -1;
+      var inTitle = title.toLowerCase().indexOf(lowerQuery) !== -1;
       if (!inContent && !inHeading && !inTitle) return;
-      var snippetSource = inContent ? page.content : page.heading;
-      var snippet = buildSnippet(snippetSource, inContent ? query : query);
+      var snippetSource = inContent ? content : heading;
+      var snippet = buildSnippet(snippetSource, query);
       results.push({
         url: page.url,
-        title: page.title,
+        title: title,
         snippetHtml: highlightSnippet(snippet, query)
       });
     });
@@ -91,13 +114,17 @@
     var resultsList = document.querySelector('.search-results');
     if (!toggle || !panel || !input || !resultsList) return;
 
+    function noResultsText() {
+      return (window.CACCIO_I18N && window.CACCIO_I18N.translate('common.searchNoResults')) || '一致するページが見つかりませんでした';
+    }
+
     function renderResults(results, query) {
       resultsList.innerHTML = '';
       if (!query) return;
       if (results.length === 0) {
         var empty = document.createElement('li');
         empty.className = 'search-empty';
-        empty.textContent = '一致するページが見つかりませんでした';
+        empty.textContent = noResultsText();
         resultsList.appendChild(empty);
         return;
       }
@@ -116,6 +143,10 @@
         li.appendChild(a);
         resultsList.appendChild(li);
       });
+    }
+
+    function runSearch() {
+      renderResults(search(input.value), input.value.trim());
     }
 
     function openSearch() {
@@ -153,9 +184,7 @@
       closeBtn.addEventListener('click', closeSearch);
     }
 
-    input.addEventListener('input', function () {
-      renderResults(search(input.value), input.value.trim());
-    });
+    input.addEventListener('input', runSearch);
 
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape') closeSearch();
@@ -165,6 +194,10 @@
       if (panel.hidden) return;
       if (panel.contains(e.target) || toggle.contains(e.target)) return;
       closeSearch();
+    });
+
+    document.addEventListener('languagechange:caccio', function () {
+      if (input.value.trim()) runSearch();
     });
   }
 

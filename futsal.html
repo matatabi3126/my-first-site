@@ -13,16 +13,16 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#a63d40">
-<title>フットサル - caccio</title>
+<title data-i18n="futsal.title">フットサル - caccio</title>
 <meta property="og:type" content="website">
-<meta property="og:title" content="フットサル - caccio">
-<meta property="og:description" content="中学時代からのフットサル歴。現在は三重県で毎週金曜日に練習中。仲間を増やして試合形式の活動を目指しています。">
+<meta property="og:title" content="フットサル - caccio" data-i18n-content="futsal.title">
+<meta property="og:description" content="中学時代からのフットサル歴。現在は三重県で毎週金曜日に練習中。仲間を増やして試合形式の活動を目指しています。" data-i18n-content="futsal.ogDescription">
 <meta property="og:image" content="https://matatabi3126.github.io/my-first-site/profile.JPG">
 <meta property="og:url" content="https://matatabi3126.github.io/my-first-site/futsal.html">
 <meta property="og:site_name" content="caccio's Profile">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="フットサル - caccio">
-<meta name="twitter:description" content="中学時代からのフットサル歴。現在は三重県で毎週金曜日に練習中。仲間を増やして試合形式の活動を目指しています。">
+<meta name="twitter:title" content="フットサル - caccio" data-i18n-content="futsal.title">
+<meta name="twitter:description" content="中学時代からのフットサル歴。現在は三重県で毎週金曜日に練習中。仲間を増やして試合形式の活動を目指しています。" data-i18n-content="futsal.ogDescription">
 <meta name="twitter:image" content="https://matatabi3126.github.io/my-first-site/profile.JPG">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,7 +32,7 @@
 </head>
 <body>
 
-  <a class="skip-link" href="#main-content">本文へスキップ</a>
+  <a class="skip-link" href="#main-content" data-i18n="common.skipLink">本文へスキップ</a>
 
   <div class="masthead">
     <div class="wrap masthead-inner">
@@ -45,13 +45,18 @@
           <a href="camp.html">Camp</a>
           <a href="making.html">Making</a>
         </div>
-        <button type="button" class="icon-button search-toggle" aria-expanded="false" aria-controls="search-panel" aria-label="サイト内検索を開く">
+        <button type="button" class="icon-button search-toggle" aria-expanded="false" aria-controls="search-panel" aria-label="サイト内検索を開く" data-i18n-aria-label="common.searchToggleLabel">
           <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
             <circle cx="10.5" cy="10.5" r="6" fill="none" stroke="currentColor" stroke-width="1.6"/>
             <line x1="15" y1="15" x2="20" y2="20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
           </svg>
         </button>
-        <button type="button" class="icon-button theme-toggle" aria-pressed="false" aria-label="ダークモードを切り替える">
+        <div class="lang-toggle" role="group" aria-label="言語切り替え" data-i18n-aria-label="common.langToggleLabel">
+          <button type="button" class="lang-option" data-lang="ja" aria-pressed="true">JP</button>
+          <span class="lang-sep">/</span>
+          <button type="button" class="lang-option" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <button type="button" class="icon-button theme-toggle" aria-pressed="false" aria-label="ダークモードを切り替える" data-i18n-aria-label="common.themeToggleLabel">
           <svg class="icon-moon" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
           <svg class="icon-sun" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
             <circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
@@ -67,7 +72,7 @@
             </g>
           </svg>
         </button>
-        <button type="button" class="icon-button nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="メニューを開く">
+        <button type="button" class="icon-button nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="メニューを開く" data-i18n-aria-label="common.navToggleLabel">
           <svg class="icon-bars" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
             <line x1="4" y1="7" x2="20" y2="7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
             <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
@@ -80,8 +85,8 @@
         </button>
         <div class="search-panel" id="search-panel" hidden>
           <div class="search-panel-inner">
-            <input type="search" class="search-input" placeholder="サイト内を検索" aria-label="サイト内検索">
-            <button type="button" class="search-close" aria-label="検索を閉じる">&times;</button>
+            <input type="search" class="search-input" placeholder="サイト内を検索" aria-label="サイト内検索" data-i18n-placeholder="common.searchPlaceholder" data-i18n-aria-label="common.searchLabel">
+            <button type="button" class="search-close" aria-label="検索を閉じる" data-i18n-aria-label="common.searchCloseLabel">&times;</button>
           </div>
           <ul class="search-results"></ul>
         </div>
@@ -107,18 +112,18 @@
         </svg>
       </div>
       <span class="kicker">Sport</span>
-      <h1 class="article-title">フットサル</h1>
+      <h1 class="article-title" data-i18n="futsal.h1">フットサル</h1>
       <div class="article-meta">
-        <span>毎週金曜日</span>
-        <span>三重県</span>
-        <span>Since 中学時代</span>
+        <span data-i18n="futsal.metaDay">毎週金曜日</span>
+        <span data-i18n="futsal.metaPref">三重県</span>
+        <span data-i18n="futsal.metaSince">Since 中学時代</span>
       </div>
     </div>
   </header>
 
   <div class="wrap">
     <figure class="article-photo reveal">
-      <svg viewBox="0 0 400 240" role="img" aria-label="フットサルコートのイラスト">
+      <svg viewBox="0 0 400 240" role="img" aria-label="フットサルコートのイラスト" data-i18n-aria-label="futsal.illustAlt">
         <rect x="20" y="20" width="360" height="200" fill="none" stroke="currentColor" stroke-width="2"/>
         <line x1="200" y1="20" x2="200" y2="220" stroke="currentColor" stroke-width="2"/>
         <circle cx="200" cy="120" r="38" fill="none" stroke="currentColor" stroke-width="2"/>
@@ -132,17 +137,17 @@
     </figure>
 
     <div class="article-body">
-      <p class="reveal">小学生の頃にサッカースクールでボールを蹴り始め、そこから中学では部活動で大会に出場した経験があります。あの頃は毎週の練習がすべてで、仲間との連携が少しずつ形になるのが楽しかったです。</p>
-      <p class="reveal">社会人になってからはフットサルチームに所属し、現在は少人数で毎週金曜日に集まって練習しています。今はメンバーが少なく、ほとんど個人練習に近い形になっていますが、パスやシュート、体の使い方を確認する時間として大事にしています。</p>
-      <p class="reveal">人数がそろえば試合形式の活動もしたいと考えており、次は外部のチームと軽めのゲームを組めるように声をかけているところです。少しずつでも仲間を増やして、コートでの緊張感を取り戻したいと思っています。</p>
+      <p class="reveal" data-i18n="futsal.p1">小学生の頃にサッカースクールでボールを蹴り始め、そこから中学では部活動で大会に出場した経験があります。あの頃は毎週の練習がすべてで、仲間との連携が少しずつ形になるのが楽しかったです。</p>
+      <p class="reveal" data-i18n="futsal.p2">社会人になってからはフットサルチームに所属し、現在は少人数で毎週金曜日に集まって練習しています。今はメンバーが少なく、ほとんど個人練習に近い形になっていますが、パスやシュート、体の使い方を確認する時間として大事にしています。</p>
+      <p class="reveal" data-i18n="futsal.p3">人数がそろえば試合形式の活動もしたいと考えており、次は外部のチームと軽めのゲームを組めるように声をかけているところです。少しずつでも仲間を増やして、コートでの緊張感を取り戻したいと思っています。</p>
     </div>
 
     <div class="share reveal">
       <span class="share-label">Share</span>
-      <a class="icon-button" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fmatatabi3126.github.io%2Fmy-first-site%2Ffutsal.html&text=%E3%83%95%E3%83%83%E3%83%88%E3%82%B5%E3%83%AB%E6%AD%B4%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E6%9B%B8%E3%81%8D%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82%E6%AF%8E%E9%80%B1%E9%87%91%E6%9B%9C%E6%97%A5%E3%81%AB%E4%B8%89%E9%87%8D%E7%9C%8C%E3%81%A7%E7%B7%B4%E7%BF%92%E4%B8%AD%E3%81%A7%E3%81%99%E3%80%82" target="_blank" rel="noopener noreferrer" aria-label="Xでシェア">
+      <a class="icon-button" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fmatatabi3126.github.io%2Fmy-first-site%2Ffutsal.html&text=%E3%83%95%E3%83%83%E3%83%88%E3%82%B5%E3%83%AB%E6%AD%B4%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E6%9B%B8%E3%81%8D%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82%E6%AF%8E%E9%80%B1%E9%87%91%E6%9B%9C%E6%97%A5%E3%81%AB%E4%B8%89%E9%87%8D%E7%9C%8C%E3%81%A7%E7%B7%B4%E7%BF%92%E4%B8%AD%E3%81%A7%E3%81%99%E3%80%82" target="_blank" rel="noopener noreferrer" aria-label="Xでシェア" data-i18n-aria-label="common.shareXLabel" data-i18n-href="futsal.shareXHref">
         <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M18.9 2H22l-7.4 8.5L23 22h-6.9l-5.4-6.9L4.6 22H1.5l7.9-9L1 2h7l4.9 6.3L18.9 2Zm-1.2 18h1.9L6.4 4H4.4l13.3 16Z"/></svg>
       </a>
-      <a class="icon-button" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Fmatatabi3126.github.io%2Fmy-first-site%2Ffutsal.html&text=%E3%83%95%E3%83%83%E3%83%88%E3%82%B5%E3%83%AB%E6%AD%B4%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E6%9B%B8%E3%81%8D%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82%E6%AF%8E%E9%80%B1%E9%87%91%E6%9B%9C%E6%97%A5%E3%81%AB%E4%B8%89%E9%87%8D%E7%9C%8C%E3%81%A7%E7%B7%B4%E7%BF%92%E4%B8%AD%E3%81%A7%E3%81%99%E3%80%82" target="_blank" rel="noopener noreferrer" aria-label="LINEでシェア">
+      <a class="icon-button" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Fmatatabi3126.github.io%2Fmy-first-site%2Ffutsal.html&text=%E3%83%95%E3%83%83%E3%83%88%E3%82%B5%E3%83%AB%E6%AD%B4%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E6%9B%B8%E3%81%8D%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82%E6%AF%8E%E9%80%B1%E9%87%91%E6%9B%9C%E6%97%A5%E3%81%AB%E4%B8%89%E9%87%8D%E7%9C%8C%E3%81%A7%E7%B7%B4%E7%BF%92%E4%B8%AD%E3%81%A7%E3%81%99%E3%80%82" target="_blank" rel="noopener noreferrer" aria-label="LINEでシェア" data-i18n-aria-label="common.shareLineLabel" data-i18n-href="futsal.shareLineHref">
         <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M4 5.5h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9l-4 3v-3H4a1 1 0 0 1-1-1v-10a1 1 0 0 1 1-1Z"/></svg>
       </a>
     </div>
@@ -151,24 +156,24 @@
   <section class="wrap gallery reveal">
     <h2 class="kicker">Gallery</h2>
     <div class="gallery-grid">
-      <button type="button" class="gallery-item" data-caption="フットサルシューズ">
+      <button type="button" class="gallery-item">
         <svg viewBox="0 0 200 200" aria-hidden="true">
           <path d="M20,150 L20,125 C20,115 30,108 42,108 C55,108 62,100 72,92 C85,82 100,78 118,80 C140,83 158,95 168,112 C174,122 174,135 168,144 C164,150 156,153 148,153 L26,153 C22,153 20,152 20,150 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
           <path d="M42,108 C48,100 52,94 58,90 M62,104 C68,96 72,90 78,86 M82,98 C88,90 93,85 100,82" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
           <line x1="20" y1="140" x2="168" y2="140" stroke="currentColor" stroke-width="2"/>
         </svg>
-        <span class="gallery-item-label">フットサルシューズ</span>
+        <span class="gallery-item-label" data-i18n="futsal.galleryShoes">フットサルシューズ</span>
       </button>
-      <button type="button" class="gallery-item" data-caption="ホイッスル">
+      <button type="button" class="gallery-item">
         <svg viewBox="0 0 200 200" aria-hidden="true">
           <rect x="55" y="85" width="45" height="35" rx="8" fill="none" stroke="currentColor" stroke-width="2"/>
           <path d="M100,88 C130,85 155,95 160,112 C163,124 155,135 140,135 C122,135 105,125 100,112 Z" fill="none" stroke="currentColor" stroke-width="2"/>
           <circle cx="132" cy="112" r="6" fill="none" stroke="currentColor" stroke-width="2"/>
           <path d="M60,120 C58,132 62,142 72,146 C80,150 90,148 95,140" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
         </svg>
-        <span class="gallery-item-label">ホイッスル</span>
+        <span class="gallery-item-label" data-i18n="futsal.galleryWhistle">ホイッスル</span>
       </button>
-      <button type="button" class="gallery-item" data-caption="トロフィー">
+      <button type="button" class="gallery-item">
         <svg viewBox="0 0 200 200" aria-hidden="true">
           <path d="M78,55 L122,55 L119,95 C118,110 108,120 100,120 C92,120 82,110 81,95 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
           <path d="M78,58 C62,58 52,68 52,80 C52,95 65,105 80,102" fill="none" stroke="currentColor" stroke-width="2"/>
@@ -177,15 +182,15 @@
           <path d="M80,140 L120,140 L128,155 L72,155 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
           <line x1="65" y1="165" x2="135" y2="165" stroke="currentColor" stroke-width="2"/>
         </svg>
-        <span class="gallery-item-label">トロフィー</span>
+        <span class="gallery-item-label" data-i18n="futsal.galleryTrophy">トロフィー</span>
       </button>
     </div>
   </section>
 
   <div class="lightbox" id="lightbox" hidden>
     <div class="lightbox-backdrop" data-lightbox-close></div>
-    <div class="lightbox-panel" role="dialog" aria-modal="true" aria-label="イラスト拡大表示">
-      <button type="button" class="lightbox-close" data-lightbox-close aria-label="閉じる">&times;</button>
+    <div class="lightbox-panel" role="dialog" aria-modal="true" aria-label="イラスト拡大表示" data-i18n-aria-label="common.lightboxLabel">
+      <button type="button" class="lightbox-close" data-lightbox-close aria-label="閉じる" data-i18n-aria-label="common.lightboxCloseLabel">&times;</button>
       <div class="lightbox-art"></div>
       <p class="lightbox-caption"></p>
     </div>
@@ -197,6 +202,7 @@
     &copy; 2026 caccio
   </footer>
 
+  <script src="lang.js" defer></script>
   <script src="scroll-animate.js" defer></script>
   <script src="theme.js" defer></script>
   <script src="gallery.js" defer></script>

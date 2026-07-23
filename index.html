@@ -13,16 +13,16 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#a63d40">
-<title>caccio's Profile</title>
+<title data-i18n="index.title">caccio's Profile</title>
 <meta property="og:type" content="website">
-<meta property="og:title" content="caccio's Profile">
-<meta property="og:description" content="三重県在住、35歳。医療事務として働くcaccioのプロフィール。フットサル・F1・キャンプについて綴っています。">
+<meta property="og:title" content="caccio's Profile" data-i18n-content="index.title">
+<meta property="og:description" content="三重県在住、35歳。医療事務として働くcaccioのプロフィール。フットサル・F1・キャンプについて綴っています。" data-i18n-content="index.ogDescription">
 <meta property="og:image" content="https://matatabi3126.github.io/my-first-site/profile.JPG">
 <meta property="og:url" content="https://matatabi3126.github.io/my-first-site/">
 <meta property="og:site_name" content="caccio's Profile">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="caccio's Profile">
-<meta name="twitter:description" content="三重県在住、35歳。医療事務として働くcaccioのプロフィール。フットサル・F1・キャンプについて綴っています。">
+<meta name="twitter:title" content="caccio's Profile" data-i18n-content="index.title">
+<meta name="twitter:description" content="三重県在住、35歳。医療事務として働くcaccioのプロフィール。フットサル・F1・キャンプについて綴っています。" data-i18n-content="index.ogDescription">
 <meta name="twitter:image" content="https://matatabi3126.github.io/my-first-site/profile.JPG">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,7 +32,7 @@
 </head>
 <body>
 
-  <a class="skip-link" href="#main-content">本文へスキップ</a>
+  <a class="skip-link" href="#main-content" data-i18n="common.skipLink">本文へスキップ</a>
 
   <div class="masthead">
     <div class="wrap masthead-inner">
@@ -45,13 +45,18 @@
           <a href="camp.html">Camp</a>
           <a href="making.html">Making</a>
         </div>
-        <button type="button" class="icon-button search-toggle" aria-expanded="false" aria-controls="search-panel" aria-label="サイト内検索を開く">
+        <button type="button" class="icon-button search-toggle" aria-expanded="false" aria-controls="search-panel" aria-label="サイト内検索を開く" data-i18n-aria-label="common.searchToggleLabel">
           <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
             <circle cx="10.5" cy="10.5" r="6" fill="none" stroke="currentColor" stroke-width="1.6"/>
             <line x1="15" y1="15" x2="20" y2="20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
           </svg>
         </button>
-        <button type="button" class="icon-button theme-toggle" aria-pressed="false" aria-label="ダークモードを切り替える">
+        <div class="lang-toggle" role="group" aria-label="言語切り替え" data-i18n-aria-label="common.langToggleLabel">
+          <button type="button" class="lang-option" data-lang="ja" aria-pressed="true">JP</button>
+          <span class="lang-sep">/</span>
+          <button type="button" class="lang-option" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <button type="button" class="icon-button theme-toggle" aria-pressed="false" aria-label="ダークモードを切り替える" data-i18n-aria-label="common.themeToggleLabel">
           <svg class="icon-moon" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
           <svg class="icon-sun" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
             <circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
@@ -67,7 +72,7 @@
             </g>
           </svg>
         </button>
-        <button type="button" class="icon-button nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="メニューを開く">
+        <button type="button" class="icon-button nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="メニューを開く" data-i18n-aria-label="common.navToggleLabel">
           <svg class="icon-bars" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
             <line x1="4" y1="7" x2="20" y2="7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
             <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
@@ -80,8 +85,8 @@
         </button>
         <div class="search-panel" id="search-panel" hidden>
           <div class="search-panel-inner">
-            <input type="search" class="search-input" placeholder="サイト内を検索" aria-label="サイト内検索">
-            <button type="button" class="search-close" aria-label="検索を閉じる">&times;</button>
+            <input type="search" class="search-input" placeholder="サイト内を検索" aria-label="サイト内検索" data-i18n-placeholder="common.searchPlaceholder" data-i18n-aria-label="common.searchLabel">
+            <button type="button" class="search-close" aria-label="検索を閉じる" data-i18n-aria-label="common.searchCloseLabel">&times;</button>
           </div>
           <ul class="search-results"></ul>
         </div>
@@ -107,25 +112,25 @@
       </div>
       <span class="kicker">Profile</span>
       <h1 class="cover-title">caccio</h1>
-      <p class="cover-meta">三重県在住 / 35歳</p>
+      <p class="cover-meta" data-i18n="index.coverMeta">三重県在住 / 35歳</p>
     </div>
 
     <figure class="cover-photo">
-      <img src="profile.JPG" alt="プロフィール画像">
+      <img src="profile.JPG" alt="プロフィール画像" data-i18n-alt="index.profileAlt">
       <figcaption>Mie, Japan</figcaption>
     </figure>
 
-    <p class="lede">
+    <p class="lede" data-i18n="index.lede">
       三重県生まれ。大学生の時に愛知県へ移り、大学卒業後はそのまま愛知の病院で医療事務として就職しました。
       その後、職場の転勤をきっかけに三重県へ戻り、現在に至ります。
     </p>
 
     <div class="share reveal">
       <span class="share-label">Share</span>
-      <a class="icon-button" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fmatatabi3126.github.io%2Fmy-first-site%2F&text=caccio%E3%81%AE%E3%83%97%E3%83%AD%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%9A%E3%83%BC%E3%82%B8%E3%80%82%E3%83%95%E3%83%83%E3%83%88%E3%82%B5%E3%83%AB%E3%83%BBF1%E3%83%BB%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%97%E3%81%8C%E8%B6%A3%E5%91%B3%E3%81%A7%E3%81%99%E3%80%82" target="_blank" rel="noopener noreferrer" aria-label="Xでシェア">
+      <a class="icon-button" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fmatatabi3126.github.io%2Fmy-first-site%2F&text=caccio%E3%81%AE%E3%83%97%E3%83%AD%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%9A%E3%83%BC%E3%82%B8%E3%80%82%E3%83%95%E3%83%83%E3%83%88%E3%82%B5%E3%83%AB%E3%83%BBF1%E3%83%BB%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%97%E3%81%8C%E8%B6%A3%E5%91%B3%E3%81%A7%E3%81%99%E3%80%82" target="_blank" rel="noopener noreferrer" aria-label="Xでシェア" data-i18n-aria-label="common.shareXLabel" data-i18n-href="index.shareXHref">
         <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M18.9 2H22l-7.4 8.5L23 22h-6.9l-5.4-6.9L4.6 22H1.5l7.9-9L1 2h7l4.9 6.3L18.9 2Zm-1.2 18h1.9L6.4 4H4.4l13.3 16Z"/></svg>
       </a>
-      <a class="icon-button" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Fmatatabi3126.github.io%2Fmy-first-site%2F&text=caccio%E3%81%AE%E3%83%97%E3%83%AD%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%9A%E3%83%BC%E3%82%B8%E3%80%82%E3%83%95%E3%83%83%E3%83%88%E3%82%B5%E3%83%AB%E3%83%BBF1%E3%83%BB%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%97%E3%81%8C%E8%B6%A3%E5%91%B3%E3%81%A7%E3%81%99%E3%80%82" target="_blank" rel="noopener noreferrer" aria-label="LINEでシェア">
+      <a class="icon-button" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Fmatatabi3126.github.io%2Fmy-first-site%2F&text=caccio%E3%81%AE%E3%83%97%E3%83%AD%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%9A%E3%83%BC%E3%82%B8%E3%80%82%E3%83%95%E3%83%83%E3%83%88%E3%82%B5%E3%83%AB%E3%83%BBF1%E3%83%BB%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%97%E3%81%8C%E8%B6%A3%E5%91%B3%E3%81%A7%E3%81%99%E3%80%82" target="_blank" rel="noopener noreferrer" aria-label="LINEでシェア" data-i18n-aria-label="common.shareLineLabel" data-i18n-href="index.shareLineHref">
         <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M4 5.5h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9l-4 3v-3H4a1 1 0 0 1-1-1v-10a1 1 0 0 1 1-1Z"/></svg>
       </a>
     </div>
@@ -139,29 +144,29 @@
       <li class="toc-item reveal">
         <span class="toc-num">01</span>
         <div class="toc-body">
-          <a href="futsal.html">フットサル</a>
-          <p>毎週金曜日に練習をしています。</p>
+          <a href="futsal.html" data-i18n="index.tocFutsalTitle">フットサル</a>
+          <p data-i18n="index.tocFutsalDesc">毎週金曜日に練習をしています。</p>
         </div>
       </li>
       <li class="toc-item reveal">
         <span class="toc-num">02</span>
         <div class="toc-body">
           <a href="f1.html">F1</a>
-          <p>テレビ観戦が中心です。</p>
+          <p data-i18n="index.tocF1Desc">テレビ観戦が中心です。</p>
         </div>
       </li>
       <li class="toc-item reveal">
         <span class="toc-num">03</span>
         <div class="toc-body">
-          <a href="camp.html">キャンプ</a>
-          <p>数年前によく行っていましたが、子供が生まれてからは頻度が減りました。最近は父親と一緒に数ヶ月に一度のペースで楽しんでいます。</p>
+          <a href="camp.html" data-i18n="index.tocCampTitle">キャンプ</a>
+          <p data-i18n="index.tocCampDesc">数年前によく行っていましたが、子供が生まれてからは頻度が減りました。最近は父親と一緒に数ヶ月に一度のペースで楽しんでいます。</p>
         </div>
       </li>
       <li class="toc-item reveal">
         <span class="toc-num">04</span>
         <div class="toc-body">
           <a href="making.html">Making</a>
-          <p>Claude Codeを使って、このサイトを作った過程を紹介しています。</p>
+          <p data-i18n="index.tocMakingDesc">Claude Codeを使って、このサイトを作った過程を紹介しています。</p>
         </div>
       </li>
     </ul>
@@ -172,13 +177,13 @@
   <section class="wrap updates reveal">
     <h2 class="kicker">Updates</h2>
     <ul class="updates-list">
-      <li><time datetime="2026-07-11">2026.07.11</time><span>サイトを公開しました</span></li>
-      <li><time datetime="2026-07-17">2026.07.17</time><span>デザインをエディトリアルスタイルに刷新しました</span></li>
-      <li><time datetime="2026-07-18">2026.07.18</time><span>スクロールアニメーションを追加しました</span></li>
-      <li><time datetime="2026-07-18">2026.07.18</time><span>ダークモードに対応しました</span></li>
-      <li><time datetime="2026-07-18">2026.07.18</time><span>イラストギャラリーを追加しました</span></li>
-      <li><time datetime="2026-07-18">2026.07.18</time><span>ハンバーガーメニューを追加しました</span></li>
-      <li><time datetime="2026-07-18">2026.07.18</time><span>OGP設定を追加しました</span></li>
+      <li><time datetime="2026-07-11">2026.07.11</time><span data-i18n="index.update1">サイトを公開しました</span></li>
+      <li><time datetime="2026-07-17">2026.07.17</time><span data-i18n="index.update2">デザインをエディトリアルスタイルに刷新しました</span></li>
+      <li><time datetime="2026-07-18">2026.07.18</time><span data-i18n="index.update3">スクロールアニメーションを追加しました</span></li>
+      <li><time datetime="2026-07-18">2026.07.18</time><span data-i18n="index.update4">ダークモードに対応しました</span></li>
+      <li><time datetime="2026-07-18">2026.07.18</time><span data-i18n="index.update5">イラストギャラリーを追加しました</span></li>
+      <li><time datetime="2026-07-18">2026.07.18</time><span data-i18n="index.update6">ハンバーガーメニューを追加しました</span></li>
+      <li><time datetime="2026-07-18">2026.07.18</time><span data-i18n="index.update7">OGP設定を追加しました</span></li>
     </ul>
   </section>
 
@@ -188,6 +193,7 @@
     &copy; 2026 caccio
   </footer>
 
+  <script src="lang.js" defer></script>
   <script src="scroll-animate.js" defer></script>
   <script src="theme.js" defer></script>
   <script src="nav.js" defer></script>
