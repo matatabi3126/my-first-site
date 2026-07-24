@@ -1,4 +1,4 @@
-var CACHE_NAME = 'caccio-site-v4';
+var CACHE_NAME = 'caccio-site-v5';
 
 var PRECACHE_URLS = [
   'index.html',

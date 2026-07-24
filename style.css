@@ -924,6 +924,12 @@ input:focus-visible,
   color: var(--color-text-soft);
 }
 
+/* ---------- comments ---------- */
+
+.comments {
+  padding: 1rem 0 3rem;
+}
+
 /* ---------- footer ---------- */
 
 .site-footer {
